@@ -12,17 +12,21 @@ public class ActiveStore implements Serializable {
 
     @XmlAttribute
     private int storeNumber;
-    private String addressLine;
-    private String city;
-    private String state;
-    private String zip;
+    private String AddressLine1;
+    private String City;
+    private String State;
+    private String Zip;
 
-    public ActiveStore(int storeNumber, String addressLine, String city, String state, String zip) {
+    public ActiveStore() {
+
+    }
+
+    public ActiveStore(int storeNumber, String AddressLine1, String City, String State, String Zip) {
         this.storeNumber = storeNumber;
-        this.addressLine = addressLine;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
+        this.AddressLine1 = AddressLine1;
+        this.City = City;
+        this.State = State;
+        this.Zip = Zip;
     }
 
     public int getStoreNumber() {
@@ -34,45 +38,45 @@ public class ActiveStore implements Serializable {
     }
 
     public String getAddressLine() {
-        return addressLine;
+        return AddressLine1;
     }
 
     public void setAddressLine(String addressLine) {
-        this.addressLine = addressLine;
+        this.AddressLine1 = AddressLine1;
     }
 
     public String getCity() {
-        return city;
+        return City;
     }
 
     public void setCity(String city) {
-        this.city = city;
+        this.City = City;
     }
 
     public String getState() {
-        return state;
+        return State;
     }
 
     public void setState(String state) {
-        this.state = state;
+        this.State = State;
     }
 
     public String getZip() {
-        return zip;
+        return Zip;
     }
 
     public void setZip(String zip) {
-        this.zip = zip;
+        this.Zip = Zip;
     }
 
     @Override
     public String toString() {
         return "ActiveStore{" +
                 "storeNumber=" + storeNumber +
-                ", addressLine='" + addressLine + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zip='" + zip + '\'' +
+                ", AddressLine1='" + AddressLine1 + '\'' +
+                ", City='" + City + '\'' +
+                ", State='" + State + '\'' +
+                ", Zip='" + Zip + '\'' +
                 '}';
     }
 }

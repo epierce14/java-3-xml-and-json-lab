@@ -8,71 +8,72 @@ import java.io.Serializable;
 public class Employee implements Serializable {
 
     @XmlAttribute
-    private int id;
-    private String firstName;
-    private String lastName;
-    private double payRate;
-    private ActiveStore activeStore;
+    private String id;
+
+    private String FirstName;
+    private String LastName;
+    private double PayRate;
+    private ActiveStore ActiveStore;
 
     public Employee() {
 
     }
 
-    public Employee(int id, String firstName, String lastName, double payRate, ActiveStore activeStore) {
+    public Employee(String id, String FirstName, String LastName, double PayRate, ActiveStore ActiveStore) {
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.activeStore = activeStore;
+        this.FirstName = FirstName;
+        this.LastName = LastName;
+        this.ActiveStore = ActiveStore;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
     public String getFirstName() {
-        return firstName;
+        return FirstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstName(String FirstName) {
+        this.FirstName = FirstName;
     }
 
     public String getLastName() {
-        return lastName;
+        return LastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastName(String LastName) {
+        this.LastName = LastName;
     }
 
     public double getPayRate() {
-        return payRate;
+        return PayRate;
     }
 
-    public void setPayRate(double payRate) {
-        this.payRate = payRate;
+    public void setPayRate(double PayRate) {
+        this.PayRate = PayRate;
     }
 
     public ActiveStore getActiveStore() {
-        return activeStore;
+        return ActiveStore;
     }
 
-    public void setActiveStore(ActiveStore activeStore) {
-        this.activeStore = activeStore;
+    public void setActiveStore(ActiveStore ActiveStore) {
+        this.ActiveStore = ActiveStore;
     }
 
     @Override
     public String toString() {
         return "Employee{" +
                 "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", payRate=" + payRate +
-                ", activeStore=" + activeStore +
+                ", FirstName='" + FirstName + '\'' +
+                ", LastName='" + LastName + '\'' +
+                ", PayRate=" + PayRate +
+                ", ActiveStore=" + ActiveStore +
                 '}';
     }
 }

@@ -14,7 +14,7 @@ public class Main {
 
             Unmarshaller unmarshaller = context.createUnmarshaller();
 
-            Employees employees = (Employees) unmarshaller.unmarshal(new File("./java-3-xml-and-json-lab/employees.xml"));
+            Employees employees = (Employees) unmarshaller.unmarshal(new File("./employees.xml"));
             employees.getEmployees().forEach(System.out::println);
 
             //String fileLocation = System.getProperty("user.dir") + File.separator + "employees.xml";
