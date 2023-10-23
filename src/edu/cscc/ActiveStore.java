@@ -1,8 +1,16 @@
 package edu.cscc;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
+@XmlRootElement(name = "ActiveStore")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ActiveStore implements Serializable {
+
+    @XmlAttribute
     private int storeNumber;
     private String addressLine;
     private String city;

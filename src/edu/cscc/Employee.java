@@ -1,8 +1,13 @@
 package edu.cscc;
 
+import javax.xml.bind.annotation.*;
 import java.io.Serializable;
 
+@XmlRootElement(name = "Employee")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Employee implements Serializable {
+
+    @XmlAttribute
     private int id;
     private String firstName;
     private String lastName;
