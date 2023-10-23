@@ -3,6 +3,7 @@ package edu.cscc;
 import java.io.Serializable;
 
 public class Employee implements Serializable {
+    private int id;
     private String firstName;
     private String lastName;
     private double payRate;
@@ -12,10 +13,19 @@ public class Employee implements Serializable {
 
     }
 
-    public Employee(String firstName, String lastName, double payRate, ActiveStore activeStore) {
+    public Employee(int id, String firstName, String lastName, double payRate, ActiveStore activeStore) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.activeStore = activeStore;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -53,7 +63,8 @@ public class Employee implements Serializable {
     @Override
     public String toString() {
         return "Employee{" +
-                "firstName='" + firstName + '\'' +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", payRate=" + payRate +
                 ", activeStore=" + activeStore +

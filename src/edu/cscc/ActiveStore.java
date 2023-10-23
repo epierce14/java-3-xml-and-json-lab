@@ -3,16 +3,26 @@ package edu.cscc;
 import java.io.Serializable;
 
 public class ActiveStore implements Serializable {
+    private int storeNumber;
     private String addressLine;
     private String city;
     private String state;
     private String zip;
 
-    public ActiveStore(String addressLine, String city, String state, String zip) {
+    public ActiveStore(int storeNumber, String addressLine, String city, String state, String zip) {
+        this.storeNumber = storeNumber;
         this.addressLine = addressLine;
         this.city = city;
         this.state = state;
         this.zip = zip;
+    }
+
+    public int getStoreNumber() {
+        return storeNumber;
+    }
+
+    public void setStoreNumber(int storeNumber) {
+        this.storeNumber = storeNumber;
     }
 
     public String getAddressLine() {
@@ -50,7 +60,8 @@ public class ActiveStore implements Serializable {
     @Override
     public String toString() {
         return "ActiveStore{" +
-                "addressLine='" + addressLine + '\'' +
+                "storeNumber=" + storeNumber +
+                ", addressLine='" + addressLine + '\'' +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
                 ", zip='" + zip + '\'' +

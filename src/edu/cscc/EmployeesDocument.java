@@ -7,13 +7,10 @@ public class EmployeesDocument implements Serializable {
     private Employees employees;
 
     public Employees getEmployees() {
-
         return employees;
-
     }
 
     public void setEmployees(Employees employees) {
-
         this.employees = employees;
     }
 
