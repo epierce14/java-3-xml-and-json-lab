@@ -1,16 +1,14 @@
 package edu.cscc;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
-import java.io.*;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
@@ -40,9 +38,11 @@ public class Main {
             Marshaller marshaller = context.createMarshaller();
             marshaller.marshal(invalidEmployees, new File("invalidEmployees.xml"));
 
+            Converter converter = new Converter(employees);
+
             Gson gson = new Gson();
 
-            String output = gson.toJson(employees);
+            String output = gson.toJson(converter.getEmployees());
             FileWriter fileWriter = new FileWriter("employees.json");
             fileWriter.write(output);
             fileWriter.close();
