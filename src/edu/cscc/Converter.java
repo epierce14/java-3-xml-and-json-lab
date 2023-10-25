@@ -1,7 +1,8 @@
 package edu.cscc;
 
-import java.lang.reflect.Array;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
 
 public class Converter {
 
@@ -11,33 +12,32 @@ public class Converter {
         this.employees = employees;
     }
 
-    public ArrayList<LinkedHashMap> getEmployees() {
+    public List<LinkedHashMap<String, Object>> getEmployees() {
 
-        LinkedHashMap empConverted = new LinkedHashMap();
-        ArrayList<LinkedHashMap> empConvertedArray = new ArrayList<>();
-
+        List<LinkedHashMap<String, Object>> empConverted = new ArrayList<LinkedHashMap<String, Object>>();
 
             for (int i = 0; i < employees.getEmployees().size(); i++) {
 
-                empConverted.put("firstName", employees.getEmployees().get(i).getFirstName());
-                empConverted.put("lastName", employees.getEmployees().get(i).getLastName());
-                empConverted.put("payRate", employees.getEmployees().get(i).getPayRate());
-                empConverted.put("id", employees.getEmployees().get(i).getId().substring(0, 11));
+                empConverted.add(new LinkedHashMap<>());
+
+                empConverted.get(i).put("firstName", employees.getEmployees().get(i).getFirstName());
+                empConverted.get(i).put("lastName", employees.getEmployees().get(i).getLastName());
+                empConverted.get(i).put("payRate", employees.getEmployees().get(i).getPayRate());
+                empConverted.get(i).put("id", employees.getEmployees().get(i).getId().substring(0, 11));
 
                 if (employees.getEmployees().get(i).getId().endsWith("A")) {
-                    empConverted.put("role", "associate");
+                    empConverted.get(i).put("role", "associate");
                 } else if ((employees.getEmployees().get(i).getId().endsWith("S"))) {
-                    empConverted.put("role", "shift_manager");
+                    empConverted.get(i).put("role", "shift_manager");
                 } else {
-                    empConverted.put("role", "store_manager");
+                    empConverted.get(i).put("role", "store_manager");
                 }
 
-                empConverted.put("storeNumber", employees.getEmployees().get(i).getActiveStore().getStoreNumber());
+                empConverted.get(i).put("storeNumber", employees.getEmployees().get(i).getActiveStore().getStoreNumber());
 
-            empConvertedArray.add(empConverted);
         }
 
-        return empConvertedArray;
+        return empConverted;
     }
 
     public ArrayList<List> getStores() {
