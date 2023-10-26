@@ -47,6 +47,10 @@ public class Main {
             fileWriter.write(output);
             fileWriter.close();
 
+            output = gson.toJson(converter.getStores());
+            fileWriter = new FileWriter("stores.json");
+            fileWriter.write(output);
+            fileWriter.close();
 
             //String fileLocation = System.getProperty("user.dir") + File.separator + "employees.xml";
             //System.out.println(fileLocation);

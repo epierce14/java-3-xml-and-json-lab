@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class ActiveStore implements Serializable {
 
     @XmlAttribute
-    private int storeNumber;
+    private String storeNumber;
     private String AddressLine1;
     private String City;
     private String State;
@@ -21,7 +21,7 @@ public class ActiveStore implements Serializable {
 
     }
 
-    public ActiveStore(int storeNumber, String AddressLine1, String City, String State, String Zip) {
+    public ActiveStore(String storeNumber, String AddressLine1, String City, String State, String Zip) {
         this.storeNumber = storeNumber;
         this.AddressLine1 = AddressLine1;
         this.City = City;
@@ -29,11 +29,11 @@ public class ActiveStore implements Serializable {
         this.Zip = Zip;
     }
 
-    public int getStoreNumber() {
+    public String getStoreNumber() {
         return storeNumber;
     }
 
-    public void setStoreNumber(int storeNumber) {
+    public void setStoreNumber(String storeNumber) {
         this.storeNumber = storeNumber;
     }
 
