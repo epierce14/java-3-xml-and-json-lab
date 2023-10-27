@@ -1,0 +1,35 @@
+[
+  {
+    "storeNumber": "39458",
+    "addressLine1": "3040 Harrisburg Pike",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "43223",
+    "employees": [
+      "23945809289",
+      "23945800001",
+      "23945800003",
+      "23945809295"
+    ]
+  },
+  {
+    "storeNumber": "39596",
+    "addressLine1": "1000 W. Broad St",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "43228",
+    "employees": [
+      "23945810408"
+    ]
+  },
+  {
+    "storeNumber": "39311",
+    "addressLine1": "100 Stringtown Rd",
+    "city": "Grove City",
+    "state": "OH",
+    "zip": "43123",
+    "employees": [
+      "2393110442"
+    ]
+  }
+]

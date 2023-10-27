@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Employees>
+    <Employee id="33945800001A">
+        <FirstName>Lana</FirstName>
+        <LastName>Williams</LastName>
+        <PayRate>9.5</PayRate>
+        <ActiveStore storeNumber="39311">
+            <AddressLine1>100 Stringtown Rd</AddressLine1>
+            <City>Grove City</City>
+            <State>OH</State>
+            <Zip>43123</Zip>
+        </ActiveStore>
+    </Employee>
+    <Employee id="23945800002Z">
+        <FirstName>Leah</FirstName>
+        <LastName>Williams</LastName>
+        <PayRate>9.75</PayRate>
+        <ActiveStore storeNumber="39311">
+            <AddressLine1>100 Stringtown Rd</AddressLine1>
+            <City>Grove City</City>
+            <State>OH</State>
+            <Zip>43123</Zip>
+        </ActiveStore>
+    </Employee>
+</Employees>

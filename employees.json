@@ -1,0 +1,50 @@
+[
+  {
+    "firstName": "Jim",
+    "lastName": "Kirkbride",
+    "payRate": 10.5,
+    "id": "23945809289",
+    "role": "shift_manager",
+    "storeNumber": "39458"
+  },
+  {
+    "firstName": "Bob",
+    "lastName": "Deal",
+    "payRate": 23.5,
+    "id": "23945800001",
+    "role": "store_manager",
+    "storeNumber": "39458"
+  },
+  {
+    "firstName": "Wynter",
+    "lastName": "Miller",
+    "payRate": 10.5,
+    "id": "23945810408",
+    "role": "shift_manager",
+    "storeNumber": "39596"
+  },
+  {
+    "firstName": "Max",
+    "lastName": "Daniels",
+    "payRate": 9.0,
+    "id": "23945800003",
+    "role": "associate",
+    "storeNumber": "39458"
+  },
+  {
+    "firstName": "James",
+    "lastName": "Budai",
+    "payRate": 10.0,
+    "id": "2393110442",
+    "role": "associate",
+    "storeNumber": "39311"
+  },
+  {
+    "firstName": "Dalaina",
+    "lastName": "Johnson",
+    "payRate": 9.25,
+    "id": "23945809295",
+    "role": "associate",
+    "storeNumber": "39458"
+  }
+]
