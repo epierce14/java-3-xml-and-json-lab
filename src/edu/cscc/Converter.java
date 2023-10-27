@@ -5,15 +5,29 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * This class takes a list of employees unmarshalled from an XML file as POJOs and converts the data into
+ * appropriated JSON format.  It contains two methods, one for converting the employees and one for comverting
+ * the stores.
+ *
+ * <p>
+ * Author: Elton Pierce
+ * Date: 10/25/2023
+ */
 public class Converter {
 
     private Employees employees;
 
+    // Constructor
     public Converter(Employees employees) {
         this.employees = employees;
     }
 
-    public List<LinkedHashMap<String, Object>> getEmployees() {
+
+    /**
+     * This method converts the employees POJOs into appropriate JSON format.
+     */
+    public List<LinkedHashMap<String, Object>> convertEmployees() {
 
         List<LinkedHashMap<String, Object>> empConverted = new ArrayList<LinkedHashMap<String, Object>>();
 
@@ -41,7 +55,10 @@ public class Converter {
         return empConverted;
     }
 
-    public List<LinkedHashMap<String, Object>> getStores() {
+    /**
+     * This method converts the stores POJOs into appropriate JSON format.
+     */
+    public List<LinkedHashMap<String, Object>> convertStores() {
 
         List<LinkedHashMap<String, Object>> storeConverted = new ArrayList<>();
 
